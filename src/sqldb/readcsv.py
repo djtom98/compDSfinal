@@ -91,6 +91,11 @@ def stemload():
     `Education` NVARCHAR(40) \
     ) ")
     #%%
+    cursor.execute("UPDATE salaries SET gender =NULL WHERE gender ='NA';")
+    cursor.execute("UPDATE salaries SET gender =NULL WHERE gender ='NA';")
+    cursor.execute("UPDATE salaries SET gender =NULL WHERE gender ='NA';")
+    cursor.execute("UPDATE salaries SET gender =NULL WHERE gender ='NA';")
+    
     # for (albumid,title) in cursor:
     #   print(albumid,title)
     cnx.commit()
