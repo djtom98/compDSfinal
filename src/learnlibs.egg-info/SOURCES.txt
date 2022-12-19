@@ -1,0 +1,17 @@
+README.md
+setup.py
+src/hw5/__init__.py
+src/hw5/hw5.py
+src/learnlibs/__init__.py
+src/learnlibs/clean_data.py
+src/learnlibs/generate_dummies.py
+src/learnlibs/read_data.py
+src/learnlibs/split_data.py
+src/learnlibs/train_and_score.py
+src/learnlibs.egg-info/PKG-INFO
+src/learnlibs.egg-info/SOURCES.txt
+src/learnlibs.egg-info/dependency_links.txt
+src/learnlibs.egg-info/requires.txt
+src/learnlibs.egg-info/top_level.txt
+src/sqldb/__init__.py
+src/sqldb/readcsv.py
