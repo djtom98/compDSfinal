@@ -5,10 +5,10 @@ import numpy as np
 
 class nan_filler:
     
-        def __init__(self, df):
+    def __init__(self, df):
             self.df = df
         
-        def fill_means(self, col):
+    def fill_means(self, col):
             
             '''
             Fill NaN with the mean value of the column in the given columns.
@@ -25,7 +25,7 @@ class nan_filler:
             return self.df
         
         
-        def fill_unavailable(self, col):
+    def fill_unavailable(self, col):
             
             '''
             Fill NaN with the "Unavailable" for the non-numeric columns.
@@ -41,3 +41,6 @@ class nan_filler:
             self.df.loc[:,col] = self.df.loc[:,col].fillna("Unavailable")
             return self.df
         
+
+
+print(dir(nan_filler))
