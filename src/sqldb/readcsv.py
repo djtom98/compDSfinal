@@ -91,21 +91,6 @@ def stemload():
     `Education` NVARCHAR(40) \
     ) ")
     #%%
-    cursor.execute("UPDATE salaries SET gender =NULL WHERE gender ='NA';")
-    cursor.execute("UPDATE salaries SET tag =NULL WHERE tag ='NA';")    
-    cursor.execute("UPDATE salaries SET race =NULL WHERE race ='NA';")
-    cursor.execute("UPDATE salaries SET level =NULL WHERE level ='NA';")
-    cursor.execute("UPDATE salaries SET company =NULL WHERE company ='NA';")
-    cursor.execute("UPDATE salaries SET title =NULL WHERE title ='NA';")
-    cursor.execute("UPDATE salaries SET totalyearlycompensation =NULL WHERE totalyearlycompensation ='NA';")
-    cursor.execute("UPDATE salaries SET location =NULL WHERE location ='NA';")
-    cursor.execute("UPDATE salaries SET Education =NULL WHERE Education ='NA';")
-    cursor.execute("UPDATE salaries SET Race_Asian =NULL WHERE Race_Asian ='NA';")
-    cursor.execute("UPDATE salaries SET Race_Hispanic =NULL WHERE Race_Hispanic ='NA';")
-    cursor.execute("UPDATE salaries SET Race_Black =NULL WHERE Race_Black ='NA';")
-    cursor.execute("UPDATE salaries SET Race_Two_Or_More =NULL WHERE Race_Two_Or_More ='NA';")
-    cursor.execute("UPDATE salaries SET otherdetails =NULL WHERE otherdetails ='NA';")
-    
     # for (albumid,title) in cursor:
     #   print(albumid,title)
     cnx.commit()

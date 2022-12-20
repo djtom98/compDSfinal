@@ -28,5 +28,4 @@ def fill_nan(df: pd.DataFrame, cols: list):
     '''
     df[cols] = df[cols].fillna(df.mean().iloc[0])
     return df 
-
-
+    
