@@ -1,31 +1,37 @@
+import sklearn
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import roc_auc_score
+import pandas as pd
+
+# Instantiate rf
+rf = RandomForestClassifier()
+hyperparams = {
+    'max_depth': 9,
+    'n_estimators': 15,
+    'min_samples_split': 3,
+    'random_state': 0
+}
+             
 class model():
 
-    def __init__(self, train, modelsel, x_cols, target) -> None:
-        self._x_cols = x_cols
-        self._target = target
-#        self._hyperparams = hyperparams
-#         if hyperparams is None:
-#            hyperparams = {}
-        self.model = modelsel
-        self.train(train)
+    def __init__(self,X_train,y_train,modelsel,hyperparams = {}) -> None:
+        self._hyperparams=hyperparams
+        # if self._hyperparams is None:
+        #     self._hyperparams = {}
+        self.X_train=X_train
+        self.y_train=y_train
+        self.model=modelsel
+        self.model.set_params(**self._hyperparams)
+        self.train()
 
-    def train(self, train):
-        '''
-        Train the model
-        Parameters:
-            train: train data as input
-        '''
-        X_train = train[self._x_cols]
-        y_train = train[self._target]
-        self.model_fit = self.model.fit(X_train, y_train) 
+    def train(self):
+        self.model = self.model.fit(self.X_train, self.y_train) 
         return None 
 
-    def predict(self, test):
-        '''
-        Predict results from test data
-        
-        Parameters:
-            test: input data for prediction
-        '''
-        X_test = test[self._x_cols]
-        return self.model_fit.predict_proba(X_test[self._x_cols])
+    def predict(self,X_test):
+        self.y_test=self.model.predict(X_test)
+        #self.test_proba=self.model.predict_proba(X_test)[:,1]
+        return self.y_test
+
+
+
