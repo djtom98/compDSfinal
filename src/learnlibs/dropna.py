@@ -23,4 +23,5 @@ class remove_nan:
             '''
             
             self.cleaned_df = self.df.dropna(axis = 0, subset = cols, how = 'any')
+            return self.cleaned_df
             
