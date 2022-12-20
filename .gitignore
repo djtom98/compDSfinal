@@ -1,0 +1,8 @@
+.eggs/
+.pytest_cache/
+build/
+Levels_Fyi_Salary_Data.csv
+src/__pycache*
+src/learnlibs.egg*
+test/__pycache*
+
