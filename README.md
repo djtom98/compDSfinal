@@ -9,7 +9,7 @@ The source code is currently hosted on GitHub at:
 https://github.com/djtom98/compDSfinal
 
 
-How install the library
+How to install the library
 ```sh
 pip install .
 ```
@@ -27,9 +27,12 @@ Before run the code you need to edit the `config.ini` file with your `port`, `us
 ## Functions
 ### Data Processing Functions
 + drop_nan - used to drop rows that contain NaN in a given column;
-+ fill_nan - fill the NaN of a given column with the mean of values that are not NaN;
-+ gen_ohe - generate dummies for the columns selected using one-hot encoding;
-+ gen_binary - generate binary dummies for the columns selected (need to add something more);
++ fill_nan_unavailable - fill the NaN of a given column with the value 'Unavailable;
+
+### Feature Creation functions
++ get_dummies - get dummy columns for the values in a specified column
++ time -splits datetime type columns into day, month and year columns
++ cluster - group by specified column to get the median of a target column
 
 ## License
 ...
