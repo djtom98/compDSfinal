@@ -1,3 +1,4 @@
+#%%
 import pandas as pd
 import numpy as np
 import unittest
@@ -21,13 +22,20 @@ from learnlibs.train_and_score import *
 #     '''
 #     cleaned_df = df.dropna(axis=0, subset=cols, how='any')
 #     return cleaned_df
+#%%
+import learnlibs.dropna as dropna
+
+#%%
 
 class TestCleanData(unittest.TestCase):
     def test_drop_nan(self):
         data=pd.DataFrame({'col1':[1,2,3,4,5,np.nan]})
         # print(data)
+
+        cols=['col1']
+        a=dropna.remove_nan(data,cols)
         expected_output=pd.DataFrame({'col1':[1,2,3,4,5]})
-        output=drop_nan(data,['col1'])
+        output=a.drop_nan(cols)
         assert_frame_equal(output,expected_output,check_dtype=False)
 
     def test_fill_nan(self):
@@ -37,8 +45,8 @@ class TestCleanData(unittest.TestCase):
         assert_frame_equal(output,expected_output,check_dtype=False)
 
 
-a=TestCleanData()
-a.test_drop_nan()
+b=TestCleanData()
+b.test_drop_nan()
 
 
 
@@ -57,3 +65,4 @@ a.test_drop_nan()
 #     df[cols] = df[cols].fillna(df.mean().iloc[0])
 #     return df 
     
+# %%
