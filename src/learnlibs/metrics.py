@@ -1,4 +1,4 @@
-    def get_roc_auc_score(self):
+def get_roc_auc_score(self):
         '''
         Obtains the roc_auc metric for  test sets.
             

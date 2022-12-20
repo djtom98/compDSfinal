@@ -7,9 +7,8 @@ class remove_nan:
         def __init__(self, df, cols):
             self.df = df
             self.cols = cols
-            self.drop_nan(self.cols)
             
-        def drop_nan(self, cols):
+        def drop_nan(self):
             
             '''
             Remove those rows that contain NaN values in the given columns.
@@ -22,7 +21,7 @@ class remove_nan:
                  cleaned_df: dataframe with removed rows in target columns
             '''
             
-            self.cleaned_df = self.df.dropna(axis = 0, subset = cols, how = 'any')
+            self.cleaned_df = self.df.dropna(axis = 0, subset = self.cols, how = 'any')
             return self.cleaned_df
             
 class fill_nan:
