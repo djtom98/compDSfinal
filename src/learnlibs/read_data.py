@@ -8,7 +8,6 @@ class loader:
     def __init__(self, file):
         self.file = file
         self.load()
-        self.split()
         
     def load(self):
         
