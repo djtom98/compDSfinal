@@ -1,14 +1,25 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 import pandas as pd
 import numpy as np
 
 
 class nan_filler:
     
+<<<<<<< HEAD
         def __init__(self, df, cols):
             self.df = df
             self.cols = cols
         
         def fill_means(self):
+=======
+        def __init__(self, df):
+            self.df = df
+        
+        def fill_means(self, col):
+>>>>>>> main
             
             '''
             Fill NaN with the mean value of the column in the given columns.
