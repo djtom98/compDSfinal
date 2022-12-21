@@ -38,6 +38,8 @@ Before run the code you need to edit the `config.ini` file with your `port`, `us
 ### Model Elements
 These consist of the model class which takes as input the splitted x and y train datasets, and also incorporates a method to predict the y values based on x_test.
 
+To contribute to your library, please recognize that our main library functions are within the src/learnlibs, and sql database interactions are organized in src/sqldb . Please raise a pull request with your changes, and the developers will review your changes before adding them to the library.
+
 ## License
 ...
 
