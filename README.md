@@ -4,7 +4,7 @@ This is our final project for Computing for Data Science course for 2022-2023 BS
 
 
 ## First steps
-### Instalation
+### Installation
 
 The source code is currently hosted on GitHub at:
 https://github.com/djtom98/compDSfinal
@@ -19,7 +19,7 @@ pip install .
 
 (We need to specify the dependencies)
 
-### Conecting to SQL
+### Connecting to SQL
 
 Our library uses the MySQL Connector to connect the database in the SQL and load it on Python.
 Before run the code you need to edit the `config.ini` file with your `port`, `user` and `password` with your credentials to your SQL server.
