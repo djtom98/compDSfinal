@@ -35,6 +35,9 @@ Before run the code you need to edit the `config.ini` file with your `port`, `us
 + time -splits datetime type columns into day, month and year columns
 + cluster - group by specified column to get the median of a target column
 
+### Model Elements
+These consist of the model class which takes as input the splitted x and y train datasets, and also incorporates a method to predict the y values based on x_test.
+
 ## License
 ...
 
